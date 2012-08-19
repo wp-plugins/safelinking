@@ -1,5 +1,5 @@
 /**
-* Safelinking javascript file (c) 2010 Safelinking.net
+* Safelinking javascript file (c) 2012 Safelinking.net
 */
 
 var aObj;
@@ -13,7 +13,7 @@ function safelinking_initialise()
 	}
 	else
 	{
-        	request = 'http://safelinking.net/api?output=json&cookie-options=1&links-to-protect=' + links;
+        	request = 'https://safelinking.net/api?output=json&cookie-options=1&links-to-protect=' + links;
         	aObj = new JSONscriptRequest(request);
         	aObj.buildScriptTag();
         	aObj.addScriptTag();

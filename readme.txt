@@ -2,7 +2,7 @@
 Contributors: Safelinking
 Tags: link, protection
 Requires at least: 3.0
-Tested up to: 3.2.1
+Tested up to: 3.4.1
 Stable tag: trunk
 
 This modification integrates safelinking.net with your website
@@ -20,3 +20,5 @@ This modification, fully compatible with any WordPress 3 version, will add a blo
 
 = 1.0 =
 * Initial release upgrade for wordpress 3.0
+= 1.1 =
+* Changed site domain to ssl

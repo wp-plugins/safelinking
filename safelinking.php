@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Safelinking
-Plugin URI: http://www.safelinking.net/tools
+Plugin URI: https://safelinking.net/tools
 Description: Easily protect your links via safelinking.net
-Version: 1.0
+Version: 1.1
 */
 
 // This is the html we will add to the comment page
