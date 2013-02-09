@@ -25,3 +25,5 @@ This modification, fully compatible with any WordPress 3 version, will add a blo
 = 1.2 =
 * Added support for posting links to your custom domain instead of the main safelinking site
 * Added support for displaying the user you're currently logged in as
+= 1.2.1 =
+* Very small bug fix

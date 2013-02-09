@@ -3,7 +3,7 @@
 Plugin Name: Safelinking
 Plugin URI: https://safelinking.net/tools
 Description: Easily protect your links via safelinking.net
-Version: 1.2
+Version: 1.2.1
 */
 
 // This is the html we will add to the comment page
@@ -73,6 +73,7 @@ function safelinking_options() {
 			}
 		} else {
 			update_option('safelinking_custom_domain', '');
+			update_option('safelinking_custom_domain_site_name', 'Safelinking');
 		}
 		update_option('safelinking_display_postbox_admin', ($_POST['safelinking_display_postbox_admin'] == 'on'));
 		update_option('safelinking_display_postbox_main_site', ($_POST['safelinking_display_postbox_main_site'] == 'on'));
