@@ -1,5 +1,5 @@
 /**
-* Safelinking javascript file (c) 2012 Safelinking.net
+* Safelinking javascript file (c) 2013 Safelinking.net
 */
 
 var aObj;
@@ -13,11 +13,31 @@ function safelinking_initialise()
 	}
 	else
 	{
-        	request = 'https://safelinking.net/api?output=json&cookie-options=1&links-to-protect=' + links;
+        	request = safelinkingUrl + 'api?output=json&cookie-options=1&links-to-protect=' + links;
         	aObj = new JSONscriptRequest(request);
         	aObj.buildScriptTag();
         	aObj.addScriptTag();
 	}
+}
+
+window.addEventListener('load', safelinking_user_init, false);
+
+function safelinking_user_init() {
+	request = safelinkingUrl + 'api?mode=getLoggedInUser&callback=userLogin';
+    aObj = new JSONscriptRequest(request);
+    aObj.buildScriptTag();
+    aObj.addScriptTag();
+}
+
+function userLogin(json) {
+	var html;
+	if(json.loggedIn) {
+		html = '(Logged in as <a href="' + safelinkingUrl + 'ucp">' + json.username + '</a>)';
+	} else {
+		html = ' - <a href="' + safelinkingUrl + 'login" target="_blank">Login to ' + safelinkingName+ '</a>';
+	}
+	document.getElementById('safelinking-user').innerHTML = html;
+	aObj.removeScriptTag();
 }
 
 function callbackfunc(jsonData) 
